@@ -1,0 +1,26 @@
+<div class="container my-5">
+    <h1 class="text-center mb-4">Nossos Produtos</h1>
+    <div class="row">
+      <div class="col-md-4 mb-4" *ngFor="let product of products">
+        <div class="card h-100 shadow-sm">
+          <img
+            [src]="product.image"
+            class="card-img-top"
+            alt="{{ product.name }}"
+            style="height: 250px; object-fit: cover;"
+          />
+          <div class="card-body d-flex flex-column">
+            <h5 class="card-title">{{ product.name }}</h5>
+            <p class="card-text text-muted">R$ {{ product.price.toFixed(2) }}</p>
+            <a
+              [routerLink]="['/product', product.id]"
+              class="btn btn-primary mt-auto"
+            >
+              Ver Mais
+            </a>
+          </div>
+        </div>
+      </div>
+    </div>
+  </div>
+  
