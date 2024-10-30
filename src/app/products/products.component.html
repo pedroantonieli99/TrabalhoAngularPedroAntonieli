@@ -1,34 +1,32 @@
-
 <link href="https://fonts.googleapis.com/css2?family=Poppins:wght@400;600&display=swap" rel="stylesheet">
 
 <style>
-
   .container {
     font-family: 'Poppins', sans-serif;
-    color: #333;
+    color: #444; /* Alterado para um tom mais escuro */
   }
 
-  
   .container h1 {
     font-size: 2.5rem;
     font-weight: 600;
-    color: #444;
+    color: #222; /* Cor mais escura para o título */
+    text-align: center; /* Centraliza o título */
+    margin-bottom: 20px; /* Aumenta o espaço abaixo do título */
   }
 
-  
   .card {
-    background-color: #f7f7f7; 
-    border: none;
+    background-color: #ffffff; /* Cor de fundo mais clara */
+    border: 1px solid #ddd; /* Adiciona uma borda leve */
     border-radius: 12px;
     overflow: hidden;
     transition: transform 0.3s ease, box-shadow 0.3s ease;
     text-align: center; 
   }
+
   .card:hover {
     transform: translateY(-5px);
-    box-shadow: 0 4px 20px rgba(0, 0, 0, 0.15);
+    box-shadow: 0 8px 30px rgba(0, 0, 0, 0.2); /* Sombra mais intensa */
   }
-
 
   .card-img-top {
     border-top-left-radius: 12px;
@@ -41,41 +39,41 @@
   .card-body {
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    justify-content: flex-start; /* Alinha os itens ao topo */
     align-items: center; 
-    padding: 15px;
+    padding: 20px; /* Aumenta o espaçamento interno */
   }
 
- 
   .card-title {
-    font-size: 1.2rem;
+    font-size: 1.5rem; /* Tamanho da fonte maior */
     font-weight: 600;
     color: #333;
-    margin-bottom: 10px;
+    margin-bottom: 5px; /* Reduz o espaço abaixo do título */
   }
 
   .card-text {
-    font-size: 1rem;
+    font-size: 1.2rem; /* Tamanho da fonte maior para o texto */
     color: #555;
     margin-bottom: 15px;
   }
 
   .btn-primary {
-    background-color: #007bff;
+    background-color: #28a745; /* Cor verde para o botão */
     border: none;
     color: #fff;
     font-weight: 600;
-    padding: 10px;
+    padding: 12px 20px; /* Aumenta o padding do botão */
     border-radius: 8px;
     transition: background-color 0.3s ease;
   }
+
   .btn-primary:hover {
-    background-color: #0056b3;
+    background-color: #218838; /* Tom de verde mais escuro no hover */
   }
 </style>
 
 <div class="container my-5">
-  <h1 class="text-center mb-4">Produtos Para Barbear</h1>
+  <h1 class="text-center mb-4">Acessórios Pedro</h1>
   <div class="row">
     <div class="col-md-4 mb-4" *ngFor="let product of products">
       <div class="card h-100 shadow-sm">
@@ -91,7 +89,7 @@
             [routerLink]="['/product', product.id]"
             class="btn btn-primary mt-auto"
           >
-            Ver Detalhes Do Produto
+            Detalhes Do Acessório
           </a>
         </div>
       </div>
